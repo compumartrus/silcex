@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silcex - Portal Actualizado</title>
+    <style>
+        /* Variables de color para mantener la consistencia */
+        :root {
+            --rojo-principal: #D32F2F; /* Un rojo moderno y elegante */
+            --blanco: #FFFFFF;
+            --gris-claro: #F5F5F5;
+            --texto-oscuro: #333333;
+        }
+
+        /* Reseteo básico y tipografía moderna */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--gris-claro);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        /* --- NAVEGACIÓN (HEADER) --- */
+        header {
+            background-color: var(--blanco);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 50px;
+            /* REEMPLAZA ESTO POR LA RUTA DE TU LOGO */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--rojo-principal);
+        }
+
+        /* --- SECCIÓN PRINCIPAL (HERO) --- */
+        .hero {
+            /* REEMPLAZA LA URL DE LA IMAGEN DE FONDO */
+            background: linear-gradient(rgba(211, 47, 47, 0.8), rgba(211, 47, 47, 0.8)), url('ruta_de_tu_imagen_principal.jpg') center/cover no-repeat;
+            color: var(--blanco);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--blanco);
+            color: var(--rojo-principal);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-principal:hover {
+            background-color: var(--gris-claro);
+        }
+
+        /* --- SERVICIOS / CONTENIDO --- */
+        .contenedor-servicios {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .contenedor-servicios h2 {
+            color: var(--rojo-principal);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta {
+            background-color: var(--blanco);
+            border-bottom: 5px solid var(--rojo-principal);
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-10px);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            /* REEMPLAZA LAS IMÁGENES DE LAS TARJETAS */
+        }
+
+        /* --- PIE DE PÁGINA (FOOTER) --- */
+        footer {
+            background-color: var(--rojo-principal);
+            color: var(--blanco);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        /* --- DISEÑO RESPONSIVO PARA CELULARES --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="ruta_de_tu_logo.png" alt="Logotipo Silcex">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Soluciones Corporativas Actualizadas</h1>
+        <p>Optimizando tus procesos con la mejor tecnología y eficiencia que tu empresa necesita.</p>
+        <a href="#" class="btn-principal">Contáctanos Hoy</a>
+    </section>
+
+    <section class="contenedor-servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid-servicios">
+            
+            <div class="tarjeta">
+                <img src="ruta_imagen_servicio_1.jpg" alt="Servicio 1">
+                <h3>Asesoría Logística</h3>
+                <p>Brindamos soluciones integrales adaptadas a las necesidades actuales del mercado.</p>
+            </div>
+
+            <div class="tarjeta">
+                <img src="ruta_imagen_servicio_2.jpg" alt="Servicio 2">
+                <h3>Comercio Exterior</h3>
+                <p>Facilitamos tus operaciones internacionales con un equipo altamente capacitado.</p>
+            </div>
+
+            <div class="tarjeta">
+                <img src="ruta_imagen_servicio_3.jpg" alt="Servicio 3">
+                <h3>Soporte Técnico</h3>
+                <p>Acompañamiento constante y plataformas seguras para la gestión de tus datos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Silcex. Todos los derechos reservados.</p>
+        <p>Diseño web optimizado para PC y dispositivos móviles.</p>
+    </footer>
+
+</body>
+</html>
